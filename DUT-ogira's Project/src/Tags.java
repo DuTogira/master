@@ -3,7 +3,7 @@ package Locator;
 /**
  * Class that represents the tag on a device that sends the signal. 
  * 
- * @author Daniel and Louis
+ * @author Kees
  */
 public class Tags 
 {
