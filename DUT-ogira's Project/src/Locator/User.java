@@ -11,6 +11,7 @@ public class User{
 	
 	private int finderDeviceID;
 	private Owner itemOwner;
+	private Tags itemTag;
 	
 	public User(String userName, int deviceID, Owner locator) {
 		this.setDeviceID(deviceID);
@@ -18,14 +19,15 @@ public class User{
 	}
 
 	public void gotLost() {
-		Tags userTag = new Tags(this.getDeviceID(), "placeholder");
+		Tags userTag = this.getItemTag();
 		userTag.setStatus(true);
 		this.itemOwner.gotLost();
 	}
 
 	public void FOUND() {
-		// TODO Auto-generated method stub
 		this.itemOwner.Found();
+		Tags userTag = this.getItemTag();
+		userTag.setStatus(false);
 	}
 	
 	public void setDeviceID(int deviceID) {
@@ -34,6 +36,15 @@ public class User{
 	
 	public int getDeviceID() {
 		return this.finderDeviceID;
+	}
+	
+	public void setItemTag(int deviceID) {
+		Tags userTag = new Tags(this.getDeviceID(), "placeholder");
+		this.itemTag = userTag;
+	}
+	
+	public Tags getItemTag() {
+		return this.itemTag;
 	}
 	
 }
