@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Instantiates other classes and Runs application
  * Does the file reads and writes
  * 
- * @author Micheal
+ * @author Mikhael Oreiro
  *
  */
 public class Server {
