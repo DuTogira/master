@@ -1,8 +1,5 @@
 package Locator;
 
-
-import Tags;
-
 /**
  * 
  * @author Ankita

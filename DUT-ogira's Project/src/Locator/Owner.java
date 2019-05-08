@@ -7,6 +7,9 @@ package Locator;
  * status_Lost: Returns true if item status is lost
  * status_Found: Returns true if item status is found
  * Returns
+ * 
+ * @author - Matthew Calderon
+ * 
  */
 
 public class Owner

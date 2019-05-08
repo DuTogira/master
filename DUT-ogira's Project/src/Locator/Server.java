@@ -1,10 +1,11 @@
+package Locator;
 
 import java.util.Scanner;
 /**
  * Instantiates other classes and Runs application
  * Does the file reads and writes
  * 
- * @author
+ * @author Micheal
  *
  */
 public class Server {
@@ -34,9 +35,11 @@ public class Server {
 			Thread.sleep(3000);
 			Tags T1 = new Tags(1234,"Latitude: 37.961632, Longitude: -121.275604");
 			Thread.sleep(3000);
-			Finder F1 = new Finder(T1); // "FINDER WILL EMAIL"
-			appUser.FOUND();
-			System.out.printf("\nItem has been located at: %s\n\n",F1.getLocation());
+			if (T1.getStatus()) { // only run finder if status is true
+				Finder F1 = new Finder(T1); // "FINDER WILL EMAIL"
+				appUser.FOUND();
+				System.out.printf("\nItem has been located at: %s\n\n",F1.getLocation());
+			}
 			
 			appOn = false;
 		}

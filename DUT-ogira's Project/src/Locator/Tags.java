@@ -8,10 +8,10 @@ package Locator;
 public class Tags 
 {
 	private int Id;
-	private static String location;
+	private String location;
 	private boolean status;
 	
-	public Tags(int finderDeviceID,String location)
+	public Tags(int finderDeviceID, String location)
 	{
 		this.Id = finderDeviceID;
 		this.location = location;
@@ -23,7 +23,7 @@ public class Tags
 		return Id;
 	}
 	//return location
-	public static String getLocation()
+	public String getLocation()
 	{
 		return location;
 	}
@@ -36,5 +36,9 @@ public class Tags
 	public void setStatus (boolean newStatus)
 	{
 		status = newStatus;
+	}
+	
+	public boolean getStatus () {
+		return this.status;
 	}
 }
