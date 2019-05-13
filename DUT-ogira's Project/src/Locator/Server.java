@@ -13,12 +13,14 @@ public class Server {
 	public static void main(String[] args) throws InterruptedException{
 		
 		boolean appOn = true;
+		//Singleton implemented here
 		Scanner client = new Scanner(System.in);
 		while (appOn==true) {
 			Owner locaterUser = new Owner();
 			
 			System.out.println("Input username:");
 			String userName = client.next();
+			//Singleton implemented here
 			User appUser = new User(userName, 48382924, locaterUser);
 			System.out.printf("\nWelcome %s, your item has been registered\n", userName);
 			System.out.println("Is your item lost? (1:\'Yes\' 2:\'No\'):");
