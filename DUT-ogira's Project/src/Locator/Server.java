@@ -16,6 +16,7 @@ public class Server {
 		//Singleton implemented here
 		Scanner client = new Scanner(System.in);
 		while (appOn==true) {
+			//Singleton implemented here
 			Owner locaterUser = new Owner();
 			
 			System.out.println("Input username:");
@@ -38,6 +39,7 @@ public class Server {
 			Tags T1 = new Tags(1234,"Latitude: 37.961632, Longitude: -121.275604");
 			Thread.sleep(3000);
 			if (T1.getStatus()) { // only run finder if status is true
+				//Singleton implemented here
 				Finder F1 = new Finder(T1); // "FINDER WILL EMAIL"
 				appUser.FOUND();
 				System.out.printf("\nItem has been located at: %s\n\n",F1.getLocation());
